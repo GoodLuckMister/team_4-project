@@ -5,6 +5,7 @@
   margin-left: auto;
   margin-right: auto;
   @media screen and (min-width: 768px) {
+    max-width: none;
     width: 620px;
   }
   @media screen and (min-width: 1200px) {
@@ -19,5 +20,14 @@
     line-height: 31px;
     letter-spacing: 0em;
     text-align: center;
+    &-addr {
+      font-family: DM Sans, sans-serif;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 26px;
+      letter-spacing: 0em;
+      text-align: center;
+    }
   }
 }
