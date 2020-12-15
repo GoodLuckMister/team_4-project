@@ -4,6 +4,11 @@
   padding-right: 50px;
   margin-left: auto;
   margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
   @media screen and (min-width: 768px) {
     max-width: none;
     width: 620px;
@@ -20,6 +25,9 @@
     line-height: 31px;
     letter-spacing: 0em;
     text-align: center;
+    text-decoration: underline;
+    text-decoration-color: rgba(225, 225, 225, 1);
+    text-underline-position: under;
     &-addr {
       font-family: DM Sans, sans-serif;
       font-size: 14px;
@@ -29,5 +37,40 @@
       letter-spacing: 0em;
       text-align: center;
     }
+  }
+  &__list-decorate-dot {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+  }
+  &__decorate-dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: rgba(199, 19, 62, 1);
+    margin-right: 10px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__list-btn {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    &-item {
+      margin-right: 18px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  &__btn {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgba(217, 217, 217, 1);
   }
 }
