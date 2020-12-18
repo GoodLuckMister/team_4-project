@@ -189,7 +189,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./../images/slider-test/Vector.svg":[["Vector.0eb086f5.svg","images/slider-test/Vector.svg"],"images/slider-test/Vector.svg"],"./../images/slider-test/devil.svg":[["devil.293b3778.svg","images/slider-test/devil.svg"],"images/slider-test/devil.svg"],"./../images/desktop/locations-bgr/sectionbg.png":[["sectionbg.b3229a95.png","images/desktop/locations-bgr/sectionbg.png"],"images/desktop/locations-bgr/sectionbg.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.js":[function(require,module,exports) {
+},{"./..\\images\\slider-test\\Vector.svg":[["Vector.0eb086f5.svg","images/slider-test/Vector.svg"],"images/slider-test/Vector.svg"],"./..\\images\\slider-test\\devil.svg":[["devil.293b3778.svg","images/slider-test/devil.svg"],"images/slider-test/devil.svg"],"./..\\images\\desktop\\locations-bgr\\sectionbg.png":[["sectionbg.b3229a95.png","images/desktop/locations-bgr/sectionbg.png"],"images/desktop/locations-bgr/sectionbg.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 require("./sass/main.scss");
@@ -228,7 +228,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57036" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64160" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
