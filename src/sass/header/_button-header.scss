@@ -1,0 +1,51 @@
+.header__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 160px;
+  height: 44px;
+  border-radius: 22px;
+  border: none;
+  background-color: getColor(btncolor);
+  color: getColor(accent);
+  font-family: $main-font;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.31;
+  z-index: 100;
+  cursor: pointer;
+  transform: translate(45px, -15px);
+  transition: background-color 250ms $cubic;
+
+  &:hover,
+  &:focus {
+    background-color: getColor('secondaryBtnActive');
+  }
+  &::after {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 10px;
+    margin-left: 10px;
+    background-image: url(../images/header/btnheader.svg);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header__button.slider {
+    display: none;
+  }
+}
+@include for-size('desktop') {
+  .header__button.is-hidden {
+    display: none;
+  }
+}
+
+.header__button.slider {
+  transform: none;
+  z-index: 1;
+}
+.header__button.slider.is-hidden {
+  display: none;
+}
