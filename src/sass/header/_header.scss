@@ -25,12 +25,16 @@
   height: 100%;
   margin-right: 40px;
 }
+.header-container {
+  position: relative;
+}
 
 .main-nav {
   @media screen and (max-width: 1000px) {
+    display: block;
+    width: 100%;
+    position: absolute;
   }
-  display: flex;
-  align-items: center;
 }
 
 .site-nav {
