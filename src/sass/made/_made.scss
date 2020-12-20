@@ -111,14 +111,14 @@
     @media screen and (min-width: 768px) {
       position: unset;
       padding-top: 46px;
-      padding-left: 15px;
+      padding-left: 20px;
       padding-right: 0;
     }
 
     @media screen and (min-width: 1200px) {
       position: unset;
       padding-top: 46px;
-      padding-left: 74px;
+      padding-left: 71px;
       padding-right: 0;
     }
   }
@@ -149,12 +149,14 @@
 
   @media screen and (min-width: 768px) {
     @include fonts(500, 14px, 1.8, 0.03em);
+    width: 340px;
     margin-bottom: 33px;
   }
 
   @media screen and (min-width: 1200px){
     @include fonts(500, 16px, 1.8, 0.04em);
     margin-bottom: 35px;
+    width: 463px;
   }
 
 }
@@ -167,11 +169,13 @@
 
   @media screen and (min-width: 768px) {
     @include fonts(500, 14px, 1.8, 0.04em);
+    width: 340px;
   }
 
   @media screen and (min-width: 1200px) {
     @include fonts(500, 14px, 1.9, 0.04em);
     margin-bottom: 45px;
+    width: 463px;
   }  
 }
 
