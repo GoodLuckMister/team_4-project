@@ -1,3 +1,16 @@
+.footer__decorate-line {
+  border-top: 1px solid getColor('sliderBorder');
+  width: 100%;
+  position: absolute;
+  bottom: 90px;
+  left: 0;
+  @include for-size('tablet') {
+    bottom: 73px;
+  }
+  @include for-size('desktop') {
+    bottom: 45px;
+  }
+}
 .copyright {
   text-align: center;
   display: flex;
@@ -10,22 +23,9 @@
   font-weight: bold;
   font-size: 14px;
   line-height: 1.52;
-  color: #907e82;
+  color: getColor('secondaryText');
   width: 145px;
-  @media screen and (min-width: 768px) {
+  @include for-size('tablet') {
     width: auto;
-  }
-}
-.footer__decorate-line {
-  border-top: 1px solid rgba(225, 225, 225, 1);
-  width: 100%;
-  position: absolute;
-  bottom: 90px;
-  left: 0;
-  @media screen and (min-width: 768px) {
-    bottom: 73px;
-  }
-  @media screen and (min-width: 1200px) {
-    bottom: 45px;
   }
 }

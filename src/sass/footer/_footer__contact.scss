@@ -7,13 +7,13 @@
   margin-bottom: 65px;
   &-tel {
     text-decoration: none;
-    color: #d41443;
+    color: getColor('accent');
   }
-  @media screen and (min-width: 768px) {
+  @include for-size('tablet') {
     margin-bottom: 0;
     font-size: 14px;
   }
-  @media screen and (min-width: 1200px) {
+  @include for-size('desktop') {
     font-size: 16px;
   }
 }
