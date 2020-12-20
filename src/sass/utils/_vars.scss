@@ -20,6 +20,7 @@ $colors: (
   'arrowColor': rgb(212, 20, 66),
   'borderMenu': rgb(225, 130, 152),
   'creamBack': rgb(255, 165, 186),
+  'transparent': rgba(0, 0, 0, 0),
 );
 
 @function getColor($key) {

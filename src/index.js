@@ -11,6 +11,8 @@ const mySwiper = new Swiper('.image-slider', {
 (() => {
   const menuBtnRef = document.querySelector("[data-menu-button]");
   const mobileMenuRef = document.querySelector("[data-menu]");
+  const buttonHidden = document.querySelector("[button-hidden]");
+  const headerContPadding = document.querySelector("[padding]")
 
 
   menuBtnRef.addEventListener("click", () => {
@@ -21,5 +23,7 @@ const mySwiper = new Swiper('.image-slider', {
     menuBtnRef.setAttribute("aria-expanded", !expanded);
 
     mobileMenuRef.classList.toggle("is-open");
+    buttonHidden.classList.toggle("is-hidden");
+    headerContPadding.classList.toggle("padding-zero")
   });
 })();

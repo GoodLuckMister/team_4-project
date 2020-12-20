@@ -20,22 +20,30 @@
   padding-top: 30px;
   z-index: 101;
 }
-
+.container.header-container.padding-zero {
+  padding-right: 20px;
+}
 .main-nav {
-  display: none;
+  @media screen and (max-width: 1200px) {
+    display: none;
+  }
 
   &.is-open {
     display: block;
     position: absolute;
-    right: 1%;
-    top: 1%;
+    right: 1px;
+    top: 1px;
     width: 250px;
     height: 500px;
     background-color: getColor('bgcmobile');
     padding-top: 60px;
   }
 }
-
+.site-nav {
+  @include for-size('desktop') {
+    display: flex;
+  }
+}
 .site-nav__link {
   text-decoration: none;
   font-family: $main-font;
@@ -55,6 +63,11 @@
   display: block;
   padding: 10px;
   border: 1px solid getColor('borderMenu');
+
+  @include for-size('desktop') {
+    padding: 0;
+    border: none;
+  }
 }
 
 .header__button {
@@ -75,11 +88,11 @@
   cursor: pointer;
   transform: translate(45px, -15px);
   transition: background-color 250ms $cubic;
+
   &:hover,
   &:focus {
     background-color: getColor('secondaryBtnActive');
   }
-
   &::after {
     content: '';
     display: inline-block;
@@ -89,14 +102,24 @@
     background-image: url(../images/header/btnheader.svg);
   }
 }
+
 @media screen and (max-width: 767px) {
   .header__button.slider {
     display: none;
   }
 }
+@include for-size('desktop') {
+  .header__button.is-hidden {
+    display: none;
+  }
+}
+
 .header__button.slider {
   transform: none;
   z-index: 1;
+}
+.header__button.slider.is-hidden {
+  display: none;
 }
 .burger-button {
   display: block;
@@ -106,13 +129,10 @@
   cursor: pointer;
   outline: 0;
   border: none;
-  background-color: getColor('heroBgrd');
+  background-color: getColor('transparent');
   z-index: 100;
-  @include for-size('tablet') {
-    background-color: getColor('creamBack');
-  }
-  &.is-open {
-    background-color: getColor('bgcmobile');
+  @include for-size('desktop') {
+    display: none;
   }
 
   &__symbol--cross {
