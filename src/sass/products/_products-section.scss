@@ -188,16 +188,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
   margin-right: auto;
   margin-left: auto;
   width: 40px;
   height: 40px;
   border-radius: 50%;
-
   background-color: getColor('textLight');
   fill: getColor('arrowColor');
-
+  cursor: pointer;
   transition: fill 250ms $cubic, background-color 250ms $cubic;
 
   &:hover,
