@@ -6,19 +6,6 @@
   text-decoration: none;
 }
 
-.header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 38px;
-  padding-bottom: -33px;
-  z-index: 9;
-
-  @media screen and (max-width: 767px) {
-    padding-top: 6px;
-  }
-}
-
 .logo-image {
   display: block;
   width: 199px;
@@ -27,54 +14,54 @@
 }
 .header-container {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 30px;
 }
 
 .main-nav {
-  @media screen and (max-width: 1000px) {
+  display: none;
+
+  &.is-open {
     display: block;
-    width: 100%;
     position: absolute;
+    right: 1%;
+    top: 1%;
+    width: 250px;
+    height: 500px;
+    background-color: getColor('bgcmobile');
+    padding-top: 60px;
   }
-}
-
-.site-nav {
-  position: relative;
-  z-index: 9;
-  padding: 0;
-  margin: 0;
-}
-
-.site-nav.list {
-  display: flex;
 }
 
 .site-nav__link {
   text-decoration: none;
   font-family: $main-font;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.31;
   margin: 15px 35px 15px auto;
-
-  color: getColor(btncolor);
-
+  color: getColor('btncolor');
+  transition: color 250ms $cubic;
   &:hover,
   &:focus,
   &.current {
-    color: getColor(accent);
+    color: getColor('accent');
   }
 }
-
-.mobile-nav .site-nav__link {
-  font-size: 14px;
+.site-nav__item {
+  display: block;
+  padding: 10px;
+  border: 1px solid getColor('borderMenu');
 }
 
 .header__button {
-  @media screen and (max-width: 767px) {
-    display: none;
-  }
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 160px;
   height: 44px;
-  padding: 0 36px;
   border-radius: 22px;
   border: none;
   background-color: getColor(btncolor);
@@ -85,6 +72,7 @@
   line-height: 1.31;
   z-index: 100;
   cursor: pointer;
+  transform: translate(45px, -15px);
   transition: background-color 250ms $cubic;
   &:hover,
   &:focus {
@@ -100,6 +88,14 @@
     background-image: url(../images/header/btnheader.svg);
   }
 }
+@media screen and (max-width: 767px) {
+  .header__button.slider {
+    display: none;
+  }
+}
+.header__button.slider {
+  transform: none;
+}
 .burger-button {
   display: block;
   width: 20px;
@@ -108,7 +104,7 @@
   cursor: pointer;
   outline: 0;
   border: none;
-  background-color: getColor('productSecondBgrd');
+  background-color: getColor('heroBgrd');
   z-index: 100;
   &.is-open {
     background-color: getColor('bgcmobile');
@@ -122,32 +118,5 @@
   }
   &.is-open &__symbol--burger {
     display: none;
-  }
-}
-.main-nav + .header__button {
-  @media screen and (max-width: 767px) {
-    display: none;
-  }
-}
-
-.header__button.side {
-  display: inline;
-  margin-left: 30px;
-}
-
-.mobile-nav .site-nav {
-  display: inline-block;
-}
-
-.mobile-nav .site-nav__item {
-  margin-right: 0;
-  margin-bottom: 22px;
-}
-
-.main-nav .site-nav {
-  display: none;
-
-  @media screen and (min-width: 1199px) {
-    display: flex;
   }
 }
