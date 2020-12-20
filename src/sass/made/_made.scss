@@ -1,27 +1,26 @@
 .section-made {
-    background-color: getColor('lightBgrd');
+  background-color: getColor('lightBgrd');
+  padding-top: 125px;
+  padding-bottom: 39px;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 130px;
+    padding-bottom: 66px;
+  }
+
+  @media screen and (min-width: 1200px) {
     padding-top: 125px;
-    padding-bottom: 39px;
+    background-image: url(../images/how-its-made/milk-bg.png);
+    background-size: contain;
+    background-position-y: 400px;
+    background-repeat: no-repeat;
 
-    @media screen and (min-width: 768px) {
-      padding-top: 130px;
-      padding-bottom: 66px;
-    }
-
-    @media screen and (min-width: 1200px) {
-      padding-top: 125px;
-      // padding-bottom: 172px;
-      background-image: url(../images/how-its-made/milk-bg.png);
-      background-size: contain;
-      background-position-y: 400px;
-      background-repeat: no-repeat;
-
-      @media screen and (min-device-pixel-ratio: 2),
-        screen and (-webkit-min-device-pixel-ratio: 2),
-        screen and (-o-min-device-pixel-ratio: 2/1),
-        screen and (min-resolution: 192dpi),
-        screen and (min-resolution: 2dppx) {
-        background-image: url(../images/how-its-made/milk-bg@2x.png);
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (-webkit-min-device-pixel-ratio: 2),
+      screen and (-o-min-device-pixel-ratio: 2/1),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url(../images/how-its-made/milk-bg@2x.png);
     }
   }
 }
@@ -30,114 +29,111 @@
   @media screen and (min-width: 768px) {
     width: auto;
   }
-
 }
 
 .made-label {
-    font-family: Titan One, cursive;
-    @include fonts(400, 26px, 1.15, 0.03em);
-    text-align: center;
-    text-transform: uppercase;
-    color: getColor('titleLight');
-    margin-bottom: 15px;
+  font-family: Titan One, cursive;
+  @include fonts(400, 26px, 1.15, 0.03em);
+  text-align: center;
+  text-transform: uppercase;
+  color: getColor('titleLight');
+  margin-bottom: 15px;
 
-    @media screen and (min-width: 768px) {
-      @include fonts(400, 26px, 1.13, 0.04em);
-    }
-
-    @media screen and (min-width: 1200px) {
-      @include fonts(400, 30px, 1.17, 0.03em);
-    }
+  @media screen and (min-width: 768px) {
+    @include fonts(400, 26px, 1.13, 0.04em);
   }
 
-  .section-made .title {
-    font-family: Titan One, cursive;
-    @include fonts(400, 34px, 1.15, 0.04em);
-    text-align: center;
-    text-transform: uppercase;
-    color: getColor('accent');
-    margin-bottom: 26px;
+  @media screen and (min-width: 1200px) {
+    @include fonts(400, 30px, 1.17, 0.03em);
+  }
+}
 
-    @media screen and (min-width: 768px) {
-      @include fonts(400, 48px, 1.14, 0.03em);
-      margin-bottom: 50px;
-    }
+.section-made .title {
+  font-family: Titan One, cursive;
+  @include fonts(400, 34px, 1.15, 0.04em);
+  text-align: center;
+  text-transform: uppercase;
+  color: getColor('accent');
+  margin-bottom: 26px;
 
-    @media screen and (min-width: 1200px) {
-      @include fonts(400, 58px, 1.15, 0.06em);
-      margin-bottom: 102px;
-    }
-
+  @media screen and (min-width: 768px) {
+    @include fonts(400, 48px, 1.14, 0.03em);
+    margin-bottom: 50px;
   }
 
-  .made-button {
-    font-family: DM Sans, sans-serif;
-    @include fonts(700, 14px, 1.29, 0.03em);
-    padding: 12px 17px;
-    border-radius: 22px;
-    width: 176px;
-    height: 44px;
-    color: getColor('accent');
-    background-color: getColor('textLight');
-    border: none;
-    margin-left: 30px;
-    transition: background-color 250ms $cubic; 
+  @media screen and (min-width: 1200px) {
+    @include fonts(400, 58px, 1.15, 0.06em);
+    margin-bottom: 102px;
+  }
+}
 
-    @media screen and (min-width: 768px) {
-      margin-left: 0;
-      @include fonts(700, 16px, 1.29, 0.03em);
-    }
-    
-    &:hover,
-    &:focus {
+.made-button {
+  font-family: DM Sans, sans-serif;
+  @include fonts(700, 14px, 1.29, 0.03em);
+  padding: 12px 17px;
+  border-radius: 22px;
+  width: 176px;
+  height: 44px;
+  color: getColor('accent');
+  background-color: getColor('textLight');
+  border: none;
+  margin-left: 30px;
+  transition: background-color 250ms $cubic;
+  cursor: pointer;
+
+  @media screen and (min-width: 768px) {
+    margin-left: 0;
+    @include fonts(700, 16px, 1.29, 0.03em);
+  }
+
+  &:hover,
+  &:focus {
     background-color: getColor('secondaryBtnActive');
-
-    
   }
 }
 
-  .decor-icon {
-    display: inline-flex;
-    margin-left: 10px;
+.decor-icon {
+  display: inline-flex;
+  margin-left: 10px;
 }
 
-  .made-content {
-    position: relative;
-    align-items: center;
+.made-content {
+  position: relative;
+  align-items: center;
+  padding-top: 46px;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  @media screen and (min-width: 768px) {
+    position: unset;
     padding-top: 46px;
-    padding-left: 30px;
-    padding-right: 30px;
-
-    @media screen and (min-width: 768px) {
-      position: unset;
-      padding-top: 46px;
-      padding-left: 20px;
-      padding-right: 0;
-    }
-
-    @media screen and (min-width: 1200px) {
-      position: unset;
-      padding-top: 46px;
-      padding-left: 71px;
-      padding-right: 0;
-    }
+    padding-left: 20px;
+    padding-right: 0;
   }
 
-  .made-thumb {
-    position: absolute;
-    bottom: 60px;
-    right: -20px;
-    left: -20px;
-
-    @media screen and (min-width: 466px) {
-      display: none;
-    }
+  @media screen and (min-width: 1200px) {
+    position: unset;
+    padding-top: 46px;
+    padding-left: 71px;
+    padding-right: 0;
   }
+}
 
-  .list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.made-thumb {
+  position: absolute;
+  bottom: 60px;
+  right: -20px;
+  left: -20px;
+
+  @media screen and (min-width: 466px) {
+    display: none;
+  }
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .content-title {
@@ -153,12 +149,11 @@
     margin-bottom: 33px;
   }
 
-  @media screen and (min-width: 1200px){
+  @media screen and (min-width: 1200px) {
     @include fonts(500, 16px, 1.8, 0.04em);
     margin-bottom: 35px;
     width: 463px;
   }
-
 }
 
 .content-list > .item {
@@ -176,7 +171,7 @@
     @include fonts(500, 14px, 1.9, 0.04em);
     margin-bottom: 45px;
     width: 463px;
-  }  
+  }
 }
 
 .flex-container {
@@ -184,5 +179,3 @@
     display: flex;
   }
 }
-
- 
