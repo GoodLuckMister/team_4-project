@@ -49,6 +49,7 @@
   z-index: 2;
   @include fonts(400, 28px, 1.14, 0.04em);
   color: getColor('accent');
+  margin-bottom: 0;
 
   @include for-size(desktop) {
     @include fonts(400, 46px, 1.15, 0.04em);

@@ -48,6 +48,7 @@
   @include fonts(400, 26px, 1.15, 0.04em);
   text-transform: uppercase;
   color: getColor('textLight');
+  margin-bottom: 0;
 
   @include for-size('tablet') {
     @include fonts(400, 22px, 1.14, 0.04em);
@@ -118,4 +119,8 @@
       margin-right: 17px;
     }
   }
+}
+
+.button-section {
+  display: flex;
 }
