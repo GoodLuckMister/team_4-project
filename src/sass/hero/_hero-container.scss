@@ -84,6 +84,8 @@
   padding-right: 13px;
   height: 24px;
   margin-top: 20px;
+  cursor: pointer;
+  transition: background-color 250ms $cubic, color 250ms $cubic;
 
   &:last-child {
     background-color: getColor('textLight');
