@@ -1,0 +1,24 @@
+.burger-button {
+  display: block;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  cursor: pointer;
+  outline: 0;
+  border: none;
+  background-color: getColor('transparent');
+  z-index: 100;
+  @include for-size('desktop') {
+    display: none;
+  }
+
+  &__symbol--cross {
+    display: none;
+  }
+  &.is-open &__symbol--cross {
+    display: block;
+  }
+  &.is-open &__symbol--burger {
+    display: none;
+  }
+}
