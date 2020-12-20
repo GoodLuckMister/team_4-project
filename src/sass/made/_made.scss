@@ -32,12 +32,18 @@
 }
 
 .made-label {
-  font-family: Titan One, cursive;
-  @include fonts(400, 26px, 1.15, 0.03em);
-  text-align: center;
-  text-transform: uppercase;
-  color: getColor('titleLight');
-  margin-bottom: 15px;
+
+    font-family: Titan One, cursive;
+    @include fonts(400, 18px, 1.17, 0.03em);
+    text-align: center;
+    text-transform: uppercase;
+    color: getColor('titleLight');
+    margin-bottom: 15px;
+
+    @media screen and (min-width: 768px) {
+      @include fonts(400, 26px, 1.13, 0.04em);
+    }
+
 
   @media screen and (min-width: 768px) {
     @include fonts(400, 26px, 1.13, 0.04em);
@@ -145,14 +151,14 @@
 
   @media screen and (min-width: 768px) {
     @include fonts(500, 14px, 1.8, 0.03em);
-    width: 340px;
+    min-width: 340px;
     margin-bottom: 33px;
   }
 
   @media screen and (min-width: 1200px) {
     @include fonts(500, 16px, 1.8, 0.04em);
     margin-bottom: 35px;
-    width: 463px;
+    min-width: 463px;
   }
 }
 
@@ -164,14 +170,16 @@
 
   @media screen and (min-width: 768px) {
     @include fonts(500, 14px, 1.8, 0.04em);
-    width: 340px;
+    min-width: 340px;
   }
 
   @media screen and (min-width: 1200px) {
     @include fonts(500, 14px, 1.9, 0.04em);
     margin-bottom: 45px;
-    width: 463px;
-  }
+
+    min-width: 463px;
+  }  
+
 }
 
 .flex-container {
