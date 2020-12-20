@@ -1,5 +1,5 @@
 .header {
-  background-color: getColor(heroBgrd);
+  background-color: getColor('heroBgrd');
 }
 
 .header a {
@@ -8,9 +8,9 @@
 
 .header .container {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   padding-top: 38px;
-  // padding-bottom: 38px;
   padding-bottom: -33px;
   z-index: 9;
 
@@ -36,7 +36,6 @@
   z-index: 9;
   padding: 0;
   margin: 0;
-
 }
 
 .site-nav.list {
@@ -61,7 +60,7 @@
 }
 
 .mobile-nav .site-nav__link {
-  font-size: 14px;    
+  font-size: 14px;
 }
 
 .header__button {
@@ -75,7 +74,22 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 1.31;
-  margin-left: auto;
+  z-index: 100;
+  cursor: pointer;
+  transition: background-color 250ms $cubic;
+  &:hover,
+  &:focus {
+    background-color: getColor('secondaryBtnActive');
+  }
+
+  &::after {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 10px;
+    margin-left: 10px;
+    background-image: url(../images/header/btnheader.svg);
+  }
 }
 
 .main-nav + .header__button {
@@ -89,15 +103,12 @@
   margin-left: 30px;
 }
 
-
 .button-icon {
   width: 4px;
   height: 8px;
   fill: getColor(accent);
   margin-left: 12px;
 }
-
-
 
 .mobile-nav {
   position: absolute;
@@ -120,12 +131,11 @@
   margin-bottom: 22px;
 }
 
-
 .main-nav .site-nav {
   display: none;
 
   @media screen and (min-width: 1199px) {
-  display: flex;
+    display: flex;
   }
 }
 
