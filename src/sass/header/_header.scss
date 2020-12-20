@@ -27,6 +27,8 @@
 }
 
 .main-nav {
+  @media screen and (max-width: 1000px) {
+  }
   display: flex;
   align-items: center;
 }
@@ -64,6 +66,9 @@
 }
 
 .header__button {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
   height: 44px;
   padding: 0 36px;
   border-radius: 22px;
@@ -91,7 +96,30 @@
     background-image: url(../images/header/btnheader.svg);
   }
 }
+.burger-button {
+  display: block;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  cursor: pointer;
+  outline: 0;
+  border: none;
+  background-color: getColor('productSecondBgrd');
+  z-index: 100;
+  &.is-open {
+    background-color: getColor('bgcmobile');
+  }
 
+  &__symbol--cross {
+    display: none;
+  }
+  &.is-open &__symbol--cross {
+    display: block;
+  }
+  &.is-open &__symbol--burger {
+    display: none;
+  }
+}
 .main-nav + .header__button {
   @media screen and (max-width: 767px) {
     display: none;
@@ -101,25 +129,6 @@
 .header__button.side {
   display: inline;
   margin-left: 30px;
-}
-
-.button-icon {
-  width: 4px;
-  height: 8px;
-  fill: getColor(accent);
-  margin-left: 12px;
-}
-
-.mobile-nav {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 10;
-  padding: 15px 20px;
-  width: 250px;
-  height: 100vh;
-  background-color: getColor(bgcmobile);
-  // transform: translateX(200%);
 }
 
 .mobile-nav .site-nav {
@@ -138,7 +147,3 @@
     display: flex;
   }
 }
-
-// * {
-//   outline: 1px solid blue;
-// }

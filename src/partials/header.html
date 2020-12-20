@@ -8,7 +8,7 @@
         </a>
 
 
-        <nav class="main-nav">
+        <nav class="main-nav" data-menu>
 
             <ul class="site-nav list">
                 <li class="site-nav__item">
@@ -25,10 +25,10 @@
                 </li>
             </ul>
         </nav>
-        <button>
-            <svg>
-                <use href="../images/header/Burger.svg"></use>
-                <use></use>
+        <button class="burger-button" type="button" aria-expanded="false" aria-controls="nav" data-menu-button>
+            <svg class="burger-button__symbol" width="20" height="20" aria-label="кнопка переключателя моюильного  меню">
+                <use class="burger-button__symbol--burger" href="./images/header/sprite-header.svg#icon-menu"></use>
+                <use class="burger-button__symbol--cross" href="./images/header/sprite-header.svg#icon-cross"></use>
             </svg>
         </button>
         <button class="header__button">
@@ -37,29 +37,5 @@
     </div>
 </header>
 
-<!-- <div class="mobile-nav" is hidden>
-    <button class="header__button side">
-        Buy now
-    
-    </button>
-    <nav>
-        <ul class="site-nav list">
-            <li class="site-nav__item">
-                <a class="site-nav__link current" href="">Home</a>
-            </li>
-            <li class="site-nav__item">
-                <a class="site-nav__link" href="">About us</a>
-            </li>
-            <li class="site-nav__item">
-                <a class="site-nav__link" href="">How it’s made?</a>
-            </li>
-            <li class="site-nav__item">
-                <a class="site-nav__link" href="">Our products</a>
-            </li>
-            <li class="site-nav__item">
-                <a class="site-nav__link" href="">Contact</a>
-            </li>
-        </ul>            
-    </nav>
-</div> -->
+
 
