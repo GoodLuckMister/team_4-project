@@ -11963,11 +11963,15 @@ var mySwiper = new _bundle.default('.image-slider', {
 (function () {
   var menuBtnRef = document.querySelector("[data-menu-button]");
   var mobileMenuRef = document.querySelector("[data-menu]");
+  var buttonHidden = document.querySelector("[button-hidden]");
+  var headerContPadding = document.querySelector("[padding]");
   menuBtnRef.addEventListener("click", function () {
     var expanded = menuBtnRef.getAttribute("aria-expanded") === "true" || false;
     menuBtnRef.classList.toggle("is-open");
     menuBtnRef.setAttribute("aria-expanded", !expanded);
     mobileMenuRef.classList.toggle("is-open");
+    buttonHidden.classList.toggle("is-hidden");
+    headerContPadding.classList.toggle("padding-zero");
   });
 })();
 },{"./sass/main.scss":"sass/main.scss","swiper/bundle":"../node_modules/swiper/swiper-bundle.esm.js","swiper/swiper-bundle.css":"../node_modules/swiper/swiper-bundle.css"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -11998,7 +12002,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62992" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62265" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
