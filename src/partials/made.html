@@ -6,23 +6,29 @@
         </div>  
     
         <div class="flex-container">
-
-            <img
-                 srcset="
-                        ./images/how-its-made/cow.png 516w,
-                        ./images/how-its-made/cow@2x.png 1032w,
-                        ./images/how-its-made/cow@3x.png 1548w,
-                        ./images/how-its-made/cow-tablet.png 340w,
-                        ./images/how-its-made/cow-tablet@2x.png 680w,
-                        ./images/how-its-made/cow-tablet@3x.png 1020w,
-                        ./images/how-its-made/cow-mobile.png 280w,
-                        ./images/how-its-made/cow-mobile@2x.png 560w,
-                        ./images/how-its-made/cow-mobile@3x.png 840w"
-                                
+            <picture>
+                <source srcset="
+                    ./images/how-its-made/cow.png 516w,
+                    ./images/how-its-made/cow@2x.png 1032w,
+                    ./images/how-its-made/cow@3x.png 1548w"
+                    media="(min-width: 1200px)" /> 
+                <source srcset="
+                    ./images/how-its-made/cow-tablet.png 340w,
+                    ./images/how-its-made/cow-tablet@2x.png 680w,
+                    ./images/how-its-made/cow-tablet@3x.png 1020w"
+                    media="(min-width: 768px)" /> 
+                <source srcset="
+                    ./images/how-its-made/cow-mobile.png 280w,
+                    ./images/how-its-made/cow-mobile@2x.png 560w,
+                    ./images/how-its-made/cow-mobile@3x.png 840w"
+                    media="(min-width: 320px)" /> 
+                <img             
                     src="./images/how-its-made/cow.png" 
                     alt="корова с графином"
-                    sizes="(min-width: 1200px) 516px, (min-width: 768px) 340px, (min-width: 320px) 280px, 100vw"
-            >
+                    sizes="(min-width: 1200px) 50vw, (min-width: 768px) 50vw, (min-width: 320px) 100vw, 100vw"
+                >
+            </picture>
+            
        
             <div class="made-content">
                 <ul class="list content-list">
@@ -41,18 +47,14 @@
                 <div class="made-thumb">
                     <picture>
                         <source
-                        srcset="./images/how-its-made/milk-bg.png 1x,
-                                ./images/how-its-made/milk-bg@2x.png 2x"
-                        
-                        media="(max-width: 1200px)"
-                        />
-                        <source
-                        srcset="./images/how-its-made/milk-bg-mobile.png 1x,
-                                ./images/how-its-made/milk-bg-mobile@2x.png 2x"
+                        srcset="./images/how-its-made/milk-bg-mobile.png 320w,
+                                ./images/how-its-made/milk-bg-mobile@2x.png 640w"
                         
                         media="(max-width: 320px)"
                         />
-                        <img src="./images/how-its-made/milk-bg.png" alt="корова с графином" />
+                        <img src="./images/how-its-made/milk-bg.png" 
+                             alt="брызги" 
+                             sizes="(min-width: 320px) 100vw, 100vw"/>
                     </picture>
                 </div>
 
