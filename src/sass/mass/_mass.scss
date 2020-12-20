@@ -1,6 +1,13 @@
 .section-mass {
     background-color: getColor('lightBgrd');
-    padding-bottom: 240px;
+    padding-bottom: 145px;
+
+    @include for-size('tablet') {
+        padding-bottom: 240px;
+    }
+    @include for-size('desktop') {
+        padding-bottom: 310px;
+    }
 }
 
 .mass-list {
@@ -18,14 +25,14 @@
         }
     }
     @include for-size('tablet') {
-        width: 180px;
+        min-width: 180px;
 
         &:not(:last-child) {
             margin-right: 60px;
         }
     }
     @include for-size('desktop') {
-        width: 330px;
+        min-width: 330px;
 
         &:not(:last-child) {
             margin-right: 30px;
