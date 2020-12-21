@@ -848,7 +848,8 @@ body {
 
 .header__button.slider {
   transform: none;
-  z-index: 1; }
+  z-index: 1;
+  margin-left: 25px; }
 
 .header__button.slider.is-hidden {
   display: none; }
@@ -862,7 +863,6 @@ body {
   border: none;
   background-color: rgba(0, 0, 0, 0);
   z-index: 100;
-  margin-right: 25px;
   margin-left: auto; }
   @media (min-width: 1200px) {
     .burger-button {
