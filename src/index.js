@@ -24,6 +24,6 @@ const mySwiper = new Swiper('.image-slider', {
 
     mobileMenuRef.classList.toggle("is-open");
     buttonHidden.classList.toggle("is-hidden");
-    headerContPadding.classList.toggle("padding-zero")
+    headerContPadding.classList.toggle("padding-zero");
   });
 })();
