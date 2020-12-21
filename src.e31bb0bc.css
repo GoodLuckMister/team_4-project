@@ -17,16 +17,6 @@
   src: local(""), url("/dm-sans-v6-latin-regular.b8eca754.eot?#iefix") format("embedded-opentype"), url("/dm-sans-v6-latin-regular.a45f7eae.woff2") format("woff2"), url("/dm-sans-v6-latin-regular.951d2140.woff") format("woff"), url("/dm-sans-v6-latin-regular.8114e003.ttf") format("truetype"), url("/dm-sans-v6-latin-regular.8e9c9c54.svg#DMSans") format("svg");
   /* Legacy iOS */ }
 
-.hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden; }
-
 /*! modern-normalize v1.0.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 /*
 Document
