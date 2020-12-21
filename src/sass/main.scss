@@ -1,14 +1,7 @@
-/*
- * Главный файл стилей.
- * Все паршалы подключаются сюда.
- */
-
-// Стили для файла с примером HTML-фрагмента
-
-@import './base/normalize';
+@import './utils/vs';
 @import './utils/mixins';
 @import './utils/vars';
-@import './utils/vs';
+@import './base/normalize';
 @import './base/fonts/fonts';
 @import './base/container';
 @import './base/common';
@@ -21,4 +14,3 @@
 @import './mass/mass';
 @import './collage/collage';
 @import './products/products-section';
-
