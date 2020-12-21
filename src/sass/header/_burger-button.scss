@@ -7,7 +7,6 @@
   border: none;
   background-color: getColor('transparent');
   z-index: 100;
-  margin-right: 25px;
   margin-left: auto;
 
   @include for-size('desktop') {
@@ -26,5 +25,4 @@
   &.is-open {
     margin-right: 0;
   }
-
 }
